@@ -1,0 +1,12 @@
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\bin\Debug\WebQuanLyBanHang.Model.dll.config
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\bin\Debug\WebQuanLyBanHang.Model.dll
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\bin\Debug\WebQuanLyBanHang.Model.pdb
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\bin\Debug\EntityFramework.dll
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\bin\Debug\EntityFramework.xml
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\obj\Debug\WebQuanLyBanHang.Model.csproj.AssemblyReference.cache
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\obj\Debug\WebQuanLyBanHang.Model.csproj.CoreCompileInputs.cache
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\obj\Debug\WebQuanLyBanHang.Model.csproj.CopyComplete
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\obj\Debug\WebQuanLyBanHang.Model.dll
+C:\Users\BOSS\source\repos\WebQuanLyBanHang\WebQuanLyBanHang.Model\obj\Debug\WebQuanLyBanHang.Model.pdb

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebQuanLyBanHang.Model.KhachHang>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh mục khách hàng</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Mã khách hàng
+        </th>
+        <th>
+            Họ tên
+        </th>
+        <th>
+            Số điện thoại
+        </th>
+        <th>
+            Địa chỉ
+        </th>
+        <th>
+            Gmail
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gmail)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MaKH }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MaKH }) |
+            @Html.ActionLink("Xoá", "Delete", new { id=item.MaKH })
+        </td>
+    </tr>
+}
+
+</table>

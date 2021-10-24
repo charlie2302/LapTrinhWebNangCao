@@ -1,0 +1,58 @@
+﻿@model WebQuanLyBanHang.Model.ThongKeNhapXuat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Thống kê nhập xuất</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã báo cáo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaoCaoThongKe.MaBC)
+        </dd>
+
+        <dt>
+            Tháng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thang)
+        </dd>
+
+        <dt>
+            Số tiền chi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTienChi)
+        </dd>
+
+        <dt>
+            Số tiền thu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTienThu)
+        </dd>
+
+        <dt>
+            Số tiền lãi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTienLai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaNX }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

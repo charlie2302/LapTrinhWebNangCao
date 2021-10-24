@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebQuanLyBanHang.Model.CTHoaDon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh mục chi tiết hoá đơn</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Mã chi tiết hoá đơn
+        </th>
+        <th>
+            Mã hoá đơn
+        </th>
+        <th>
+            Tên sản phẩm
+        </th>
+        <th>
+            Giá
+        </th>
+        <th>
+            Số lượng
+        </th>
+        <th>
+            Thành tiền
+        </th>
+        <th>
+            Voucher
+        </th>
+        <th>
+            Phí vận chuyển
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaCTHD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoaDon.MaHD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanPham.TenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanPham.Gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThanhTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Voucher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhiVanChuyen)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MaCTHD }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MaCTHD }) |
+            @Html.ActionLink("Xoá", "Delete", new { id=item.MaCTHD })
+        </td>
+    </tr>
+}
+
+</table>

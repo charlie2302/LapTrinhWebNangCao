@@ -1,0 +1,117 @@
+﻿<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+@{
+    Layout = "~/Views/Shared/_CartLayout.cshtml";
+}
+
+
+@model IEnumerable<WebQuanLyBanHang.Models.CartItem>
+<div class="logo">
+    <h3>Giỏ hàng của bạn</h3>
+</div>
+<div class="cart">
+    <div class="cart-bottom">
+        <div class="table">
+            <table>
+                <tbody>
+                    <tr class="main-heading">
+                        <th>Hình ảnh</th>
+                        <th class="long-txt">Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Tổng cộng</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="cake-top">
+                            <td class="cakes">
+                                <div class="product-img">
+                                    <img style="max-width:60%" src=@Url.Content("~/Content/images/"+item.hinhanh)>
+                                </div>
+                            </td>
+                            <td class="cake-text">
+                                <div class="product-text">
+                                    <h3>@item.tensp</h3>
+                                    <p>Mã sản phẩm: @item.masp</p>
+                                </div>
+                            </td>
+                            <td class="quantity" style="vertical-align: top">
+                                <div class="product-right">
+                                    @item.soluong
+                                </div>
+                            </td>
+                            <td class="price" style="padding: 12px;">
+                                <h4>@item.dongia</h4>
+                            </td>
+                            <td class="top-remove">
+                                <h4>@item.thanhtien</h4>
+                                <div class="close">
+                                    <h5>@Html.ActionLink("Chỉnh sửa", "UpdateCart", new { @id = item.masp, @class = "text-white" })</h5>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="vocher">
+            <div class="dis-total">
+                <h1>Tổng cộng: @ViewBag.Total đ</h1>
+                <div class="tot-btn">
+                    <a class="shop" href="https://localhost:44394/Home/Index">Quay lại trang chủ</a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSubscriptionForm">
+                        Thanh Toán
+                    </button>
+                </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+</div>
+<div class="copy-right">
+    <p>© 2019 - 2021 HARPER 7 COFFEE & TEA</a></p>
+</div>
+<div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">THÔNG TIN THANH TOÁN</h4>
+
+            </div>
+            @using (Html.BeginForm("Order", "Cart"))
+            {
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <input type="text" id="form3" name="HoTen" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form3">Họ tên người đặt</label>
+                    </div>
+                    <div class="md-form mb-4">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="email" id="form2" name="Gmail" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form2">Gmail</label>
+                    </div>
+                    <div class="md-form mb-4">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="text" id="form2" name="DiaChi" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form2">Địa chỉ giao hàng</label>
+                    </div>
+                    <div class="md-form mb-4">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="number" id="form2" name="SDT" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form2">Số điện thoại người nhận</label>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="submit" class="btn btn-indigo">Thanh Toán <i class="fas fa-paper-plane-o ml-1"></i></button>
+                </div>
+            }
+            </div>
+    </div>
+</div>
+

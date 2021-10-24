@@ -1,0 +1,50 @@
+﻿@model WebQuanLyBanHang.Model.BaoCaoThongKe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Báo cáo thống kê</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã báo cáo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaBC)
+        </dd>
+
+        <dt>
+            Mã nhân viên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.MaNV)
+        </dd>
+
+        <dt>
+            Tháng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thang)
+        </dd>
+
+        <dt>
+            Tên nhân viên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaBC }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

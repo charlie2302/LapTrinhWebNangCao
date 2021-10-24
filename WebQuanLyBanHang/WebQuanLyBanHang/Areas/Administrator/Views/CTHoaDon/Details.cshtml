@@ -1,0 +1,82 @@
+﻿@model WebQuanLyBanHang.Model.CTHoaDon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Chi tiết hoá đơn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã chi tiết hoá đơn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaCTHD)
+        </dd>
+
+        <dt>
+            Mã hoá đơn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoaDon.MaHD)
+        </dd>
+
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPham.TenSP)
+        </dd>
+
+        <dt>
+            Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            Số lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            Thành tiền
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhTien)
+        </dd>
+
+        <dt>
+            Voucher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voucher)
+        </dd>
+
+        <dt>
+            Phí vận chuyển
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhiVanChuyen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaCTHD }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

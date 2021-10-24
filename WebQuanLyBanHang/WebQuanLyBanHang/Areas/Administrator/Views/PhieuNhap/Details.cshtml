@@ -1,0 +1,66 @@
+﻿@model WebQuanLyBanHang.Model.PhieuNhap
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Phiếu nhập</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã nhập xuất
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongKeNhapXuat.MaNX)
+        </dd>
+
+        <dt>
+            Tháng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thang)
+        </dd>
+
+        <dt>
+            Mã sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPham.MaSP)
+        </dd>
+
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Số lượng nhập
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLNhap)
+        </dd>
+
+        <dt>
+            Giá nhập
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaNhap)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaCTPNhap }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

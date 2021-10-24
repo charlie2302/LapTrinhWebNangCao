@@ -1,0 +1,28 @@
+﻿@using WebQuanLyBanHang.Model
+
+@model IEnumerable<WebQuanLyBanHang.Model.SanPham>
+
+@foreach (var item in Model.GroupBy(m => m.LoaiSP).Skip(2))
+{
+    <h3 class="menu-section-title">@item.Key.TenLoaiSP</h3>
+    foreach (var item2 in item)
+    {
+        <div class="menu-item">
+            <div class="row border-dot no-gutters">
+                <div class="col-8 menu-item-name">
+                    <h6>@item2.TenSP</h6>
+                </div>
+                <div class="col-4 menu-item-price text-right">
+                    <a href=@Url.Action("AddToCart", "Cart", new {@id=item2.MaSP,@url=Request.Url.ToString() })><h6>@item2.Gia.Value.ToString("#,##")</h6></a>
+                </div>
+            </div>
+            <div class="menu-item-description">
+                <p>
+                    @item2.MoTa
+                </p>
+            </div>
+        </div>
+    }
+
+<div class="menu-bg"></div>
+}

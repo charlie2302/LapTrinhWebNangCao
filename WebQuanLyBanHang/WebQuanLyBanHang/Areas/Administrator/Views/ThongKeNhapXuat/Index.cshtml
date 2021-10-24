@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebQuanLyBanHang.Model.ThongKeNhapXuat>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh mục thống kê nhập xuất</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Mã nhập xuất
+        </th>
+        <th>
+            Mã báo cáo
+        </th>
+        <th>
+            Tháng
+        </th>
+        <th>
+            Số tiền chi
+        </th>
+        <th>
+            Số tiền thu
+        </th>
+        <th>
+            Số tiền lãi
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaoCaoThongKe.MaBC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaoCaoThongKe.Thang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTienChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTienThu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTienLai)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MaNX }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MaNX }) |
+            @Html.ActionLink("Xoá", "Delete", new { id=item.MaNX })
+        </td>
+    </tr>
+}
+
+</table>

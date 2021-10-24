@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebQuanLyBanHang.Model.BaoCaoThongKe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh mục báo cáo thống kê</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Mã báo cáo
+        </th>
+        <th>
+            Mã nhân viên
+        </th>
+        <th>
+            Tháng
+        </th>
+        <th>
+            Tên nhân viên
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaBC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVien.MaNV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVien.HoTen)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MaBC }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MaBC }) |
+            @Html.ActionLink("Xoá", "Delete", new { id=item.MaBC })
+        </td>
+    </tr>
+}
+
+</table>

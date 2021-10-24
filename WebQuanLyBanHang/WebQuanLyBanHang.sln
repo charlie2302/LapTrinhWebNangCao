@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebQuanLyBanHang", "WebQuanLyBanHang\WebQuanLyBanHang.csproj", "{2DC35B1C-3C6B-4A0C-A325-9BBE4A3E55F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebQuanLyBanHang.Model", "WebQuanLyBanHang.Model\WebQuanLyBanHang.Model.csproj", "{B2F3DF03-B503-4D3C-A208-C75FB53CF293}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DC35B1C-3C6B-4A0C-A325-9BBE4A3E55F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC35B1C-3C6B-4A0C-A325-9BBE4A3E55F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC35B1C-3C6B-4A0C-A325-9BBE4A3E55F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC35B1C-3C6B-4A0C-A325-9BBE4A3E55F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F3DF03-B503-4D3C-A208-C75FB53CF293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F3DF03-B503-4D3C-A208-C75FB53CF293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F3DF03-B503-4D3C-A208-C75FB53CF293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F3DF03-B503-4D3C-A208-C75FB53CF293}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F991B837-5427-4182-99C7-D32C001CA56A}
+	EndGlobalSection
+EndGlobal

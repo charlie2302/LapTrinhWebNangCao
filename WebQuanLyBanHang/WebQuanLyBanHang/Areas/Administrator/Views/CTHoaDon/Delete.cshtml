@@ -1,0 +1,88 @@
+﻿@model WebQuanLyBanHang.Model.CTHoaDon
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xoá</h2>
+
+<h3>Bạn muốn xoá mục này?</h3>
+<div>
+    <h4>Chi tiết hoá đơn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã chi tiết hoá đơn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaCTHD)
+        </dd>
+
+        <dt>
+            Mã hoá đơn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoaDon.MaNV)
+        </dd>
+
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPham.TenSP)
+        </dd>
+
+        <dt>
+            Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            Số lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            Thành tiền
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhTien)
+        </dd>
+
+        <dt>
+            Voucher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voucher)
+        </dd>
+
+        <dt>
+            Phí vận chuyển
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhiVanChuyen)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>
